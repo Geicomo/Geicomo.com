@@ -1,8 +1,7 @@
 <?php
-// Function to display user data from hash.xml sorted by score
 function displayUserData() {
-    // Read data from hash.xml
-    $data = file_get_contents("../../data/hash.xml");
+    // Read data from leaderboard.txt
+    $data = file_get_contents("leaderboard.txt");
 
     // Explode data into an array of user records
     $userRecords = explode("\n", trim($data));
@@ -11,19 +10,19 @@ function displayUserData() {
     $userScores = [];
 
     foreach ($userRecords as $record) {
-        list($username, $none1, $none2, $none3, $score) = explode(",", $record);
-        $userScores[$username] = (int)$score;
+        list($username, $score, $userScore) = explode(",", $record);
+        $userScores[$username] = (int)str_replace('Highest: ', '', $userScore);
     }
 
     // Sort the user scores in descending order based on scores
     arsort($userScores);
 
-    foreach ($userScores as $username => $score) {
-        echo "Username: $username, High-Score: $score<br>";
+    foreach ($userScores as $username => $highestScore) {
+        echo "Username: $username, Highest-Score: $highestScore<br>";
     }
 }
 
-// Display user data from hash.xml sorted by score
+// Display user data from leaderboard.txt sorted by highest score
 displayUserData();
 ?>
 
