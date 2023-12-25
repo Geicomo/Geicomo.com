@@ -19,6 +19,7 @@
 </head>
 <body>
 <?php include('templates/header.php');?>
+<?php include('templates/loginbtn.php');?>
 <div class="content">
 <style>
 * {box-sizing: border-box;}

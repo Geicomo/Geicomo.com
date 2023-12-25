@@ -3,7 +3,7 @@
 <head>
         <title> Geicomos Website | Home</title>
         <meta name="viewport" content="width=device-width, initial-scale=0.7">
-        <link rel="stylesheet" type="text/css" href="templates/main.css">
+        <link rel="stylesheet" type="text/css" href="https://www.geicomo.com/templates/main.css">
 	<script src="https://kit.fontawesome.com/a8e47ed895.js" crossorigin="anonymous"></script>
 </head>
 <style>
