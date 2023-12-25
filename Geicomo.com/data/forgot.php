@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-        <title> Geicomos Website | Login</title>
+        <title> Geicomos Website | Signup</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="../templates/main.css">
 </head>
@@ -76,23 +76,10 @@ button:hover {
 </style>
 <form action="" method="post" enctype="multipart/form-data" autocomplete="off">
     <div class="container">
-	<p style="font-family:courier;font-size:37px"><strong> Login Panel </strong></p>
-                <h4>Both fields are <span>required</span></h4>
-
-                <label>Username</label>
-                <input type="text" name="username">
-
-                <label>Password</label>
-                <input type="password" name="password">
-
-                <button style="float:right;" type="submit" name="submit">Login</button>
-
-
-                <a href="../data/signup.php"><button type="button" style="margin-top:12px;font-size:11px;width:80px;float:left;background-color:#00B2FF;" >Sign Up</button></a> <br>
-                <p class="error"><?php echo @$user->error ?></p>
-                <p class="success"><?php echo @$user->success ?></p>
-<a style="font-size:12px;" href="forgot.php">Forgot Password</a>
-        </form>
+	<p style="font-family:courier;font-size:37px"><strong> Forgot Password </strong></p>
+	<p>Please email <strong>geicomoservices@gmail.com</strong> with the same email your account is associated with and send a request for a password change and a admin will respond and help you. Thank you.</p>
+	<a href="/data/login.php"><button type="button" style="background-color:#00B2FF;">Back</button></a>	
+	</form>
 </div>
 </div>
 </div>

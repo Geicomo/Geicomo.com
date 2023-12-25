@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["message"])) {
 
     // Save the message to a text file (chat.txt in this example)
     $chatFilePath = 'chat.txt';
-    $formattedMessage = date('(H:i:s)') . " " . $username . ": " . $message . "\n";
+    $formattedMessage = date('(h:i a) ') . " " . $username . ": " . $message . "\n";
 
     // Append the new message to the file
     file_put_contents($chatFilePath, $formattedMessage, FILE_APPEND | LOCK_EX);

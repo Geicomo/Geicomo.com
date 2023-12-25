@@ -23,11 +23,8 @@ if (isset($_SESSION['authorized']) && $_SESSION['authorized'] === TRUE) {
                 include("../secure.php");
                 exit;
         } else {
-                echo '<div class="box">';
-                echo "<h1>403 Forbidden </h1>";
-                echo "<p><i>Login failed. Please check your username and password.     </i>";
-                echo '<input style="padding:5px" type="button" value="Back" onclick="history.back()">';
-                echo '</div>';
+		echo "<script>window.location.href = '/error.php';</script>";
+		exit;
         }
 ?>
 </body>
