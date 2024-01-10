@@ -2,7 +2,8 @@
 <style>
 .bottom {
 position: absolute;
-bottom: 0;	
+bottom: 0;
+margin-bottom: 5px;	
 }
 </style>
 <body>

@@ -3,7 +3,6 @@
         <title>rmotd.geic</title>
 </head>
 <body>
-<a style="float:right;font-size:12px" href="https://geicomo.com/help">help.info</a>
 <div class="rmotd">
 RMOTD:
 <?php

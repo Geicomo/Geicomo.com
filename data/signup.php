@@ -57,6 +57,16 @@
 </div>
         </div>
     </form>
-</form>
+<script>
+    // Check for the presence of the success message
+    var successMessage = "<?php echo @$user->success; ?>";
+
+    if (successMessage) {
+        // If there's a success message, wait for 2 seconds and then redirect
+        setTimeout(function() {
+            window.location.href = "https://geicomo.com/index.php";
+        }, 2000);
+    }
+</script>
 </body>
 </html>

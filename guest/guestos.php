@@ -3,25 +3,32 @@
 <head>
         <title>Geic OS</title>
         <meta name="viewport" content="width=device-width, initial-scale=0.7">
-        <link rel="stylesheet" type="text/css" href="https://www.geicomo.com/templates/base.css">
+        <link rel="stylesheet" type="text/css" href="https://geicomo.com/templates/base.css">
 </head>
 <body>
-    <div id="container">
         <div id="page1" class="draggable-box">
             <div class="title-bar">home.geic<span class="close-button" onclick="closeBox(this)">X</span></div>
-            <div class="content">
-        <?php include '/var/www/html/home.php'; ?>
-    </div>
-<div class="resize-handle"></div>
-</div>
-    <div id="page1" class="draggable-box" style="left:670px;">
-            <div class="title-bar">rmotd.geic<span class="close-button" onclick="closeBox(this)">X</span></div>
-            <div class="content">
-        <?php include '/var/www/html/templates/rmotd.php'; ?>
-    </div>
-<div class="resize-handle"></div>
-</div>
-    </div>
+            	<div class="content">
+        		<?php include '/var/www/html/home.php'; ?>
+    		</div>
+		<div class="resize-handle"></div>
+	</div>
+    	<div id="page1" class="draggable-box" style="left:677px;">
+            	<div class="title-bar">rmotd.geic<span class="close-button" onclick="closeBox(this)">X</span></div>
+            		<div class="content">
+        			<?php include '/var/www/html/templates/rmotd.php'; ?>
+    		</div>
+		<div class="resize-handle"></div>
+	</div>
+        <div id="page1" class="draggable-box" style="left:121vh;">
+            	<div class="title-bar">return.geic</div>
+			<div class="content">
+        			<?php include '/var/www/html/userinfo.php'; ?>
+    		</div>
+		<div class="resize-handle"></div>
+	</div>
+
+
     <script>
 function makeDraggable(element) {
     const titleBar = element.querySelector('.title-bar');
@@ -168,7 +175,8 @@ document.querySelectorAll('.draggable-box').forEach(makeResizable);
 
         </script>
 <div style="position:fixed;bottom:0">
-        <a>All content is licensed under </a><a href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1 unless otherwise posted.">CC BY-NC 4.0 DEED</a> unless otherwise posted.</a>
+	<a>All content is licensed under </a><a href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1 unless otherwise posted.">CC BY-NC 4.0 DEED</a> unless otherwise posted.</a>
+
 </div>
 </body>
 </html>
