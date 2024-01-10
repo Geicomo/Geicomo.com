@@ -38,7 +38,7 @@ class LoginUser {
                 session_start();
                 $_SESSION['username'] = $this->username;
                 $_SESSION['authorized'] = true;
-                header("location: ../stat.php");
+                header("location: secure.php");
                 return $this->success = "Login Successful";
             }
         }
@@ -46,4 +46,3 @@ class LoginUser {
     }
 }
 ?>
-

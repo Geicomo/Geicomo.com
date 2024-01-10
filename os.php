@@ -10,7 +10,14 @@
         <div id="page1" class="draggable-box">
             <div class="title-bar">home.geic<span class="close-button" onclick="closeBox(this)">X</span></div>
             <div class="content">
-        <?php include 'login.php'; ?>
+        <?php include 'home.php'; ?>
+    </div>
+<div class="resize-handle"></div>
+</div>
+    <div id="page1" class="draggable-box" style="left:670px;">
+            <div class="title-bar">rmotd.geic<span class="close-button" onclick="closeBox(this)">X</span></div>
+            <div class="content">
+        <?php include 'templates/rmotd.php'; ?>
     </div>
 <div class="resize-handle"></div>
 </div>

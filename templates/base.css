@@ -1,0 +1,47 @@
+    .draggable-box {
+        position: absolute;
+	border: 2px solid #333330; /* Black border */
+        border-radius: 3px;
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Optional: Adds shadow for a 3D effect */
+        overflow-y: scroll;
+	min-width: 400px;
+	min-height: 200px;
+    }
+    .title-bar {
+	border: black solid 1px;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	font-weight: bold;
+        background-color: #838383; /* Title bar color */
+        color: black; /* Title bar text color */
+        padding: 5px;
+        cursor: move; /* Cursor changes to indicate movability */
+        display: flex; /* Use flex layout */
+        justify-content: space-between; /* Space between title and close button */
+        align-items: center; /* Vertically center content */
+    }
+    .close-button {
+        float: right;
+        cursor: pointer;
+        color: #CC0000;
+        font-weight: bold;
+        user-select: none; /* Prevent text selection */
+    }
+    .resize-handle {
+    	width: 10px;
+    	height: 10px;
+   	background-color: grey;
+    	position: absolute;
+    	bottom: 0;
+    	right: 0;
+    	cursor: nwse-resize; /* Cursor indicates resizable area */
+	}
+    .rmotd {
+    	min-height: 160px;
+    }
+    .content {
+	height: 100%;
+    	background-color: #ebe8e8;
+    	padding: 5px;
+    }

@@ -1,3 +1,10 @@
+<html>
+<head>
+        <title>rmotd.geic</title>
+</head>
+<body>
+<a style="float:right;font-size:12px" href="help.php">help.info</a>
+<div class="rmotd">
 RMOTD:
 <?php
                 //20 possible strings
@@ -26,7 +33,7 @@ RMOTD:
                 echo "3,124.7 Hours ;)";
                 break;
         case 7:
-                echo " <a href='https://www.youtube.com/watch?v=j7Ff6izcRCc'>Click Me</a> ";
+                echo " <a href='https://www.youtube.com/watch?v=j7Ff6izcRCc'>click_me.web</a> ";
                 break;
         Case 8:
                 echo "THE REDLINERUSH!!!";
@@ -38,7 +45,7 @@ RMOTD:
                 echo "Currently at Sea";
                 break;
         case 11:
-                echo " <marquee direction='right'> weed weed weed weed weed weed weed weed weed weed weed weed weed weed weed weed weed weed weed weed weed</marquee>";
+                echo " <marquee direction='right'> weed weed weed weed weed weed weed weed weed weed weed weed weed weed weed weed weed weed weed weed weed weed weed weed weed weed weed</marquee>";
                 break;
         case 12:
                 echo "Faded than a hoe faded than a hoe faded than a hoe faded than a...";
@@ -51,12 +58,16 @@ RMOTD:
                 break;
         case 15:
                 echo "More secure than club penguin";
-		break;
-	case 16:
-		echo "Geicomo Gamessssssss...";
-		break;
+                break;
+        case 16:
+                echo "Geicomo Gamessssssss...";
+                break;
         default:
                 echo "Tough luck";
                 break;
         }
 ?>
+</div>
+</body>
+</html>
+
