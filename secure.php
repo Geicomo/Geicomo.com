@@ -20,7 +20,7 @@ session_start();
 
 if (isset($_SESSION['authorized']) && $_SESSION['authorized'] === TRUE) {
     // Alright, let's show all the hidden functionality!
-                include("/var/www/html/os.php");
+                include("/var/www/os.php");
                 exit;
         } else {
                 echo "<script>window.location.href = '/error.php';</script>";

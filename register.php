@@ -3,25 +3,25 @@
 <head>
         <title>Geic OS</title>
         <meta name="viewport" content="width=device-width, initial-scale=0.7">
-        <link rel="stylesheet" type="text/css" href="templates/base.css">
+        <link rel="stylesheet" type="text/css" href="https://geicomo.com/templates/base.css">
 </head>
+<style>
+.draggable-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+</style>
 <body>
-    <div id="container">
-        <div id="page1" class="draggable-box">
-            <div class="title-bar">home.geic<span class="close-button" onclick="closeBox(this)">X</span></div>
-            <div class="content">
-        <?php include 'home.php'; ?>
-    </div>
-<div class="resize-handle"></div>
-</div>
-    <div id="page1" class="draggable-box" style="left:670px;">
-            <div class="title-bar">rmotd.geic<span class="close-button" onclick="closeBox(this)">X</span></div>
-            <div class="content">
-        <?php include 'templates/rmotd.php'; ?>
-    </div>
-<div class="resize-handle"></div>
-</div>
-    </div>
+	<div id="page1" class="draggable-box">
+      		<div class="title-bar">register.geic<span class="close-button" onclick="closeBox(this)">X</span></div>
+       			<div class="content">
+        			<?php include '/var/www/html/data/signup.php'; ?>
+    			</div>
+			<div class="resize-handle"></div>
+		</div>
+	</div>
     <script>
 function makeDraggable(element) {
     const titleBar = element.querySelector('.title-bar');

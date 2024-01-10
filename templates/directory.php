@@ -9,11 +9,11 @@ bottom: 0;
 <div class="content">
 <br><br><br>
 <div class="bottom">
-<a href="home.php">./home.geic</a>
+<a href="https://geicomo.com/home">./home.geic</a>
 <br><br>
-<a href="info.php">./info.geic</a>
+<a href="https://geicomo.com/info">./info.geic</a>
 <br><br>
-<a href="serverinfo.php">./servers.geic</a>
+<a href="https://geicomo.com/serverinfo">./servers.geic</a>
 </div>
 </div>
 </body>

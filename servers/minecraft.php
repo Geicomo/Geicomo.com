@@ -49,7 +49,7 @@
         <a style="font-size:15px">The Geicomo.com Minecraft server has various plugins to keep players active such as server side shops and purchasable player shops <br> other than that the main goal is to build cool shit. There is also ways to protect your builds so you can come back anytime and pick <br> up where you left off. Join Today!</a><br>
         <a style="font-size:15px"><i>Server restarts at 12:00AM/PM PDT daily.</i></a><br><br>
         <a style="font-weight:bold;font-size:16px"> Minecraft Server Collection: </a>
-        <a href="servers/mcplugins.php">minecraft_plugins.info</a> <br>
+        <a href="https://geicomo.com/servers/mcplugins.php">minecraft_plugins.info</a> <br>
 </div>
 
 <?php include('../templates/servers.php');?>

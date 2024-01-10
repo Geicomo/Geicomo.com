@@ -5,12 +5,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=0.7">
         <link rel="stylesheet" type="text/css" href="templates/base.css">
 </head>
+<style>
+.draggable-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+</style>
 <body>
     <div id="container">
         <div id="page1" class="draggable-box">
-            <div class="title-bar">home.geic<span class="close-button" onclick="closeBox(this)">X</span></div>
+            <div class="title-bar">sign_in.geic<span class="close-button" onclick="closeBox(this)">X</span></div>
             <div class="content">
-        <?php include 'login.php'; ?>
+        <?php include 'data/login.php'; ?>
     </div>
 <div class="resize-handle"></div>
 </div>

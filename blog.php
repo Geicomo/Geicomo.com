@@ -3,7 +3,7 @@
 <head>
 	<title>blog.info</title>
         <meta name="viewport" content="width=device-width, initial-scale=0.7">
-        <link rel="stylesheet" type="text/css" href="templates/base.css">
+        <link rel="stylesheet" type="text/css" href="https://geicomo.com/templates/base.css">
 </head>
 <body>
 <a style="font-size:18px">Login trouble...</a><br>
@@ -14,6 +14,6 @@
 <a style="font-size:12px">08 Dec 2024</a><br>
 <a>The version as of this posts idea came to me after I was doing a remodel for the old Geicomo.com page and thought about some cool ideas,<br> after making a few designs I thought it would be cool to be able to have multiple "tabs" open of the same website all in one page,<br> like a Geicomo only search-engine. I got pretty far on my first day to (This post is the first day) </a>
 <br><br><br><br><br><br>
-<?php include('templates/directory.php');?>
+<?php include('/var/www/html/templates/directory.php');?>
 </body>
 </html>
