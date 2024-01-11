@@ -14,7 +14,7 @@
 <strong>Storage:</strong> 1.5TB Drive
 <br><br>
 <a style="font-size:17px">Geicomos Blog:</a><br>
-<a style="border:solid 1.5px black;border-top:none;border-left:none;border-right:none" href="https://geicomo.com/blog.php">blog.info</a><br>
+<a style="border:solid 1.5px black;border-top:none;border-left:none;border-right:none" href="https://geicomo.com/blog/blog.php">blog.info</a><br>
 <br><br><br><br>
 <?php include('templates/directory.php');?>
 </body>

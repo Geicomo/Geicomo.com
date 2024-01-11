@@ -1,3 +1,9 @@
+<?php
+session_start();
+if (isset($_SESSION['authorized']) && $_SESSION['authorized'] === true) {
+        $_SESSION['authorized'] = false;
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -221,7 +227,7 @@ function sendMessage(message) {
 
 // Update the chat initially and every 5 seconds
 updateChat();
-setInterval(updateChat, 5000);
+setInterval(updateChat, 2000);
 
 // Handle chat send button click
 var sendButton = document.getElementById('send-button');

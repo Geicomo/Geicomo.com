@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["message"])) {
     // Save the message to a text file (chat.txt in this example)
     date_default_timezone_set('America/Los_Angeles');
     $chatFilePath = 'livechat.txt';
-    $formattedMessage = date('(m-d-y, h:i a)') . " " . $username . ": " . $message . "\n";
+    $formattedMessage = date('(m-d-y, g:i a)') . " " . $username . ": " . $message . "\n";
 
     // Append the new message to the file
     file_put_contents($chatFilePath, $formattedMessage, FILE_APPEND | LOCK_EX);

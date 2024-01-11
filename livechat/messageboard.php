@@ -17,15 +17,17 @@
 		max-width: 343px;
                 border: solid 1px;
                 border-radius: 2px;
-        }
+	}
     </style>
 </head>
 <body>
+<div class="content">
 <div class="chatbox">
         <strong>Live Chat</strong>
 	<div class="messages" id="chat-box">
 	<!-- Chat messages will be displayed here -->
 	</div>
+</div>
 </div>
 <script>
 // Chat Script
@@ -43,7 +45,7 @@ function updateChat() {
         }
     };
 
-    xhr.open('GET', 'https://geicomo.com/test/get_chat_messages.php', true);
+    xhr.open('GET', 'https://geicomo.com/livechat/get_chat_messages.php', true);
     xhr.send();
 }
 
@@ -58,7 +60,7 @@ function sendMessage(message) {
         }
     };
 
-    xhr.open('POST', 'https://geicomo.com/test/send_message.php', true);
+    xhr.open('POST', 'https://geicomo.com/livechat/send_message.php', true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.send('message=' + encodeURIComponent(message));
 }
@@ -80,7 +82,7 @@ sendButton.addEventListener('click', function () {
     messageInput.value = '';
 });
 </script>
-<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br>
 </body>
 </html>
 

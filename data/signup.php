@@ -47,10 +47,10 @@
             <input type="password" name="password">
         </div>
 
-<div class="container"><button style="display:flex;align-items:center;justify-content:center;margin-top:12px;font-size:12px;height:25px;width:100px;float:left;background-color:#1CB500;" type="submit" name="submit">Register</button>
-<a href="https://geicomo.com/index.php"><button type="button" style="display:flex;align-items:center;justify-content:center;margin-top:12px;font-size:12px;height:25px;width:100px;float:left;background-color:#01b2ff;">Back</button></a><br></div>
+<div class="container"><a href="https://geicomo.com/index.php"><button type="button" style="display:flex;align-items:center;justify-content:center;margin-top:12px;font-size:12px;height:25px;width:100px;float:left;background-color:#01b2ff;">Back</button></a><br>
+<button style="display:flex;align-items:center;justify-content:center;margin-top:12px;font-size:12px;height:25px;width:100px;float:left;background-color:#1CB500;" type="submit" name="submit">Register</button></div>
     
-<div class="container" style="margin-top:8px;"><input type="checkbox" name="acceptTos" value="yes"> I accept the <a href="../geicomoterms.pdf">Terms of Service</a></div>
+<div class="container" style="margin-top:8px;"><input type="checkbox" name="acceptTos" value="yes"> I accept the Terms of Service, behind this box.</a></div>
 <div class="container">
 	<p class="error"><?php echo @$user->error ?></p>
 	<p class="success"><?php echo @$user->success ?></p>

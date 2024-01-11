@@ -45,9 +45,71 @@ Last Login:
 <?php echo getLastLoginTime($username, $jsonArray); ?>
 <br><br>
 <a style="font-size:17px;">Live chat messaging:</a><br>
-    <input type="text" id="message" placeholder="Type your message" required>
-    <button id="send-button">Send</button>
-<br>
+    <?php
+	if ($username !== 'Guest') {
+    		echo '<input type="text" id="message" placeholder="Type your message" required>';
+           	echo '<button id="send-button">Send</button>';
+	} else {
+    		echo '<input type="text" id="message" disabled placeholder="Guests cant post">';
+		echo '<button id="send-button" disabled>X</button>';
+	}
+    ?>
+<br><br>
+    <?php
+    if ($username === 'Geicomo') {
+        // Display input fields for title and blog content
+        echo '<a style="font-size:18px;">Post to the Blog</a><br><br>';
+        echo '<label for="blog_title">Title:</label><br>';
+        echo '<input type="text" id="blog_title" required><br>';
+        echo '<label for="blog_content">Content:</label><br>';
+        echo '<textarea id="blog_content" rows="4" cols="50" required></textarea><br>';
+        echo '<button id="submit_blog" style="align-items:center;justify-content:center;margin-top:12px;font-size:12px;height:25px;width:60px;float:left;background-color:#34b500;">Submit</button>';
+    }
+            if (!$username) {
+        echo '<h2>Blog Posts</h2>';
+        $blogFilePath = 'blogs.txt';
+        if (file_exists($blogFilePath)) {
+            $blogPosts = file_get_contents($blogFilePath);
+            $postsArray = explode("\n\n", $blogPosts); // Split posts based on double newline
+            foreach ($postsArray as $post) {
+                echo '<div class="blog-post">';
+                // Extract the title, date, and content from each post
+                list($title, $date, $content) = explode("\n", $post, 3);
+                echo '<p class="blog-title">' . $title . '</p>';
+                echo '<p class="blog-date">' . $date . '</p>';
+                echo '<p class="blog-content">' . nl2br($content) . '</p>';
+                echo '</div>';
+            }
+        } else {
+            echo '<p>No blog posts available.</p>';
+        }
+    }
+    ?>
+
+    <!-- Include JavaScript for submitting the blog post -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const submitButton = document.getElementById('submit_blog');
+            const blogTitle = document.getElementById('blog_title');
+            const blogContent = document.getElementById('blog_content');
+
+            submitButton.addEventListener('click', function () {
+                const title = blogTitle.value;
+                const content = blogContent.value;
+                // Send the title and content to the PHP script using AJAX
+                const xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        // Refresh the page after successful submission
+                        location.reload();
+                    }
+                };
+                xhr.open('POST', 'https://geicomo.com/blog/posttoblog.php', true);
+                xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                xhr.send('blog_title=' + encodeURIComponent(title) + '&blog_content=' + encodeURIComponent(content));
+            });
+        });
+    </script>
 <?php
 if ($_SESSION['authorized']) {
 // Check if the logout button was clicked

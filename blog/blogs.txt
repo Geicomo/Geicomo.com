@@ -1,0 +1,11 @@
+Chat implemented
+10th of January, 2024, 10:27pm
+After hours of working to get a live website chat setup and get guest permissions figured out it is implemented, I started at around 3:00pm and its now 9:14pm. Tough luck indeed.
+
+Login trouble...
+9th of January, 2024, 1:32am
+I cry, PHP login feature will not work with how I have the tabs system so I will have to create a login screen, but I have some ideas that I think will work like a Winodws 7 login screen type login when visiting the site.
+
+ Creating Geicomo.com
+8th of January, 2024, 4:12pm
+The version as of this posts idea came to me after I was doing a remodel for the old Geicomo.com page and thought about some cool ideas, after making a few designs I thought it would be cool to be able to have multiple &quot;tabs&quot; open of the same website all in one page, like a Geicomo only search-engine. I got pretty far on my first day to (This post is the first day)

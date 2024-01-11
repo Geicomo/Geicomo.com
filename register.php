@@ -14,15 +14,24 @@
 }
 </style>
 <body>
+	<div id="page1" style="height:405px;width:300px;" class="draggable-box">
+      		<div class="title-bar">terms_conditions.info<span class="close-button" onclick="closeBox(this)">X</span></div>
+       			<div style="overflow-y:scroll;" class="content">
+        			<?php include '/var/www/html/geicomoterms.php'; ?>
+    			</div>
+			<div class="resize-handle"></div>
+		</div>
+	</div>
 	<div id="page1" class="draggable-box">
       		<div class="title-bar">register.geic<span class="close-button" onclick="closeBox(this)">X</span></div>
-       			<div class="content">
+       			<div  class="content">
         			<?php include '/var/www/html/data/signup.php'; ?>
     			</div>
 			<div class="resize-handle"></div>
 		</div>
 	</div>
-    <script>
+
+<script>
 function makeDraggable(element) {
     const titleBar = element.querySelector('.title-bar');
     let isDragging = false;
