@@ -20,6 +20,8 @@ class LoginUser {
         // Check if the username exists in stored users
         if (array_key_exists($this->username, $this->stored_users)) {
             $user = &$this->stored_users[$this->username]; // Directly access the user by username
+	
+	    date_default_timezone_set('America/Los_Angeles');
 
             $stored_password = $user['password'];
             $stored_salt = $user['salt'];
@@ -30,7 +32,7 @@ class LoginUser {
             // Compare the hashed passwords
             if ($hashed_password === $stored_password) {
                 // Update last login time for the user
-                $user['lastLogin'] = date('m-d-Y h:i a');
+		$user['lastLogin'] = date('m-d-Y h:i a');
 
                 // Save the updated user data back to the file
                 file_put_contents($this->storage, json_encode($this->stored_users, JSON_PRETTY_PRINT));

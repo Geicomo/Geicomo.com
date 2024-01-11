@@ -1,6 +1,6 @@
 <html>
 <head>
-        <title>rmotd.geic</title>
+        <title>rmotd.info</title>
 </head>
 <body>
 <div class="rmotd">
@@ -16,7 +16,7 @@ RMOTD:
                 break;
         case 2:
                 echo "Sometimes I dream about cheese... ";
-                echo "<audio autoplay><source src='/var/www/html/audio/cheese.mp3' type='audio/mpeg'></audio>";
+                echo "<audio autoplay><source src='https://geicomo.com/audio/cheese.mp3' type='audio/mpeg'></audio>";
                 break;
         case 3:
 
@@ -60,7 +60,10 @@ RMOTD:
                 break;
         case 16:
                 echo "Geicomo Gamessssssss...";
-                break;
+		break;
+	case 17:
+		echo "Installing rootkit...";
+		break;
         default:
                 echo "Tough luck";
                 break;

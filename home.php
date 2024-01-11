@@ -11,7 +11,7 @@ This page is basically an about me page, this is Geicomo.com a personal website 
 <br>
 All previous data was deleted because of such a overhaul, sorry for the inconvenience.<br> Create a new account!
 <br><br>
-<a class="rmotd" href="https://www.geicomo.com/templates/rmotd.php">RMOTD.info</a>
+<a class="rmotd" href="https://geicomo.com/templates/rmotd.php">RMOTD.info</a>
 <br><br><br><br><br>
 <?php include('templates/directory.php');?>
 </body>

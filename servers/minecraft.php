@@ -41,7 +41,7 @@
             }
         }
         echo "<strong> Server Status: </strong>";
-        echo "<img src='../images/" . checkserveronline("127.0.0.1", 25565) . ".jpg' /><br>";
+        echo "<img src='https://geicomo.com/images/" . checkserveronline("127.0.0.1", 25565) . ".png' /><br>";
         ?>
 
         <div><strong>Players Online: </strong> <span class="server-status" id="player-count">0</span>/8</div>

@@ -13,8 +13,8 @@
         $data = json_decode(file_get_contents('https://api.steampowered.com/IGameServersService/GetServerList/v1/?filter=\appid\108600\addr\98.146.216.139:16261&key=D98A2705777F0843FC224F8D7D2717A1'));
         $main = $data->response->servers[0] ?? null;
         $status = "";
-        $up = "../images/up.jpg";
-        $down = "../images/down.jpg";
+        $up = "https://geicomo.com/images/up.png";
+        $down = "https://geicomo.com/images/down.png";
         $players = $main->players;
         if($main !== null){
                 $status = $up;

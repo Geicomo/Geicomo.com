@@ -39,10 +39,14 @@
 
 
 ?>
-
+<a style="font-size:15px;float:right;"href="https://geicomo.com/help">help.info</a>
 <p style="font-size:17px">Welcome: <?php echo "$username" ?> </p>
 Last Login:
 <?php echo getLastLoginTime($username, $jsonArray); ?>
+<br><br>
+<a style="font-size:17px;">Live chat messaging:</a><br>
+    <input type="text" id="message" placeholder="Type your message" required>
+    <button id="send-button">Send</button>
 <br>
 <?php
 if ($_SESSION['authorized']) {
@@ -68,7 +72,9 @@ if (!$isValidLogin) {
      echo "<a href='https://geicomo.com/index.php'><button class='btn' style='width:display:flex;align-items:center;justify-content:center;margin-top:12px;font-size:12px;height:25px;width:60px;float:left;background-color:#fda502;'>Login</button></a>";
 }
 ?>
-<br><br><br><br><br>
+<br><br><br>
+<a href="https://geicomo.com/test/test.php">chat.info</a>
+<br><br><br><br>
 <?php include('templates/directory.php');?>
 </body>
 </html>

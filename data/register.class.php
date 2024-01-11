@@ -22,7 +22,9 @@ class RegisterUser {
         $this->acceptTos = $acceptTos;
         $this->email = $email;
 
-        $salt = bin2hex(random_bytes(3));
+	date_default_timezone_set('America/Los_Angeles');
+
+	$salt = bin2hex(random_bytes(3));
         $encrypted_password = hash('sha256', $this->raw_password . $salt);
 
         $this->stored_users = json_decode(file_get_contents($this->storage), true);

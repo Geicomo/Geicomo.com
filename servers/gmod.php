@@ -15,8 +15,8 @@
         $players = $data->players;
         $online = $data->is_online;
         $status = "";
-        $up = "../images/up.jpg";
-        $down = "../images/down.jpg";
+        $up = "https://geicomo.com/images/up.png";
+        $down = "https://geicomo.com/images/down.png";
         if ($online == 1){
                 $status = $up;
         }else{
