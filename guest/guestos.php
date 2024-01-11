@@ -199,7 +199,7 @@ function updateChat() {
         }
     };
 
-    xhr.open('GET', 'https://geicomo.com/test/get_chat_messages.php', true);
+    xhr.open('GET', 'https://geicomo.com/livechat/get_chat_messages.php', true);
     xhr.send();
 }
 
@@ -214,7 +214,7 @@ function sendMessage(message) {
         }
     };
 
-    xhr.open('POST', 'https://geicomo.com/test/send_message.php', true);
+    xhr.open('POST', 'https://geicomo.com/livechat/send_message.php', true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.send('message=' + encodeURIComponent(message));
 }

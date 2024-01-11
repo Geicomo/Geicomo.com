@@ -73,7 +73,7 @@ if (!$isValidLogin) {
 }
 ?>
 <br><br><br>
-<a href="https://geicomo.com/test/test.php">chat.info</a>
+<a href="https://geicomo.com/livechat/messageboard.php">chat.info</a>
 <br><br><br><br>
 <?php include('templates/directory.php');?>
 </body>
