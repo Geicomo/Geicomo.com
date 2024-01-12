@@ -5,7 +5,7 @@ session_start();
 if(isset($_POST['submit'])){
     $user = new LoginUser($_POST['username'], $_POST['password']);
 } elseif(isset($_POST['guestLogin'])) {
-    $_SESSION['user'] = 'guest';
+    $_SESSION['username'] = 'guest';
     header("location: /guest/guestos.php");
     exit;
 }

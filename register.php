@@ -15,7 +15,7 @@
 </style>
 <body>
 	<div id="page1" style="height:405px;width:300px;" class="draggable-box">
-      		<div class="title-bar">terms_conditions.info<span class="close-button" onclick="closeBox(this)">X</span></div>
+      		<div class="title-bar">terms_conditions.info</div>
        			<div style="overflow-y:scroll;" class="content">
         			<?php include '/var/www/html/geicomoterms.php'; ?>
     			</div>
@@ -23,7 +23,7 @@
 		</div>
 	</div>
 	<div id="page1" class="draggable-box">
-      		<div class="title-bar">register.geic<span class="close-button" onclick="closeBox(this)">X</span></div>
+      		<div class="title-bar">register.geic</div>
        			<div  class="content">
         			<?php include '/var/www/html/data/signup.php'; ?>
     			</div>

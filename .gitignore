@@ -2,3 +2,4 @@ logged/admin/
 *.swp
 audio/
 images/
+livechat/*.txt

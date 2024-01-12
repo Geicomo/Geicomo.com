@@ -2,6 +2,7 @@
 session_start();
 if (isset($_SESSION['authorized']) && $_SESSION['authorized'] === true) {
         $_SESSION['authorized'] = false;
+        $_POST['username'] = "Guest";
     }
 ?>
 <!DOCTYPE html>
@@ -14,10 +15,10 @@ if (isset($_SESSION['authorized']) && $_SESSION['authorized'] === true) {
 <body>
         <div id="page1" class="draggable-box">
             <div class="title-bar">home.geic<span class="close-button" onclick="closeBox(this)">X</span></div>
-                <div class="content">
-                        <?php include '/var/www/html/home.php'; ?>
-                </div>
-                <div class="resize-handle"></div>
+	    <div class="content">    
+			<?php include '/var/www/html/home.php'; ?>
+	    </div>
+		<div class="resize-handle"></div>
         </div>
         <div id="page1" class="draggable-box" style="left:677px;">
                 <div class="title-bar">rmotd.info<span class="close-button" onclick="closeBox(this)">X</span></div>

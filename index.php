@@ -16,7 +16,7 @@
 <body>
 <div id="container">
 	<div id="page1" class="draggable-box">
-        	<div class="title-bar">sign_in.geic<span class="close-button" onclick="closeBox(this)">X</span></div>
+        	<div class="title-bar">sign_in.geic</div>
 	<div class="resize-handle"></div>
             	<div class="content">
         		<?php include 'data/login.php'; ?>

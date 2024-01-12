@@ -39,10 +39,9 @@
     <?php
     session_start();
 
-    // Check if the username is "Geicomo"
     $username = isset($_SESSION['username']) ? $_SESSION['username'] : '';
 
-    if ($username) {
+   if ($username) {
         echo '<h2>Blog Posts</h2>';
         $blogFilePath = 'blogs.txt';
         if (file_exists($blogFilePath)) {
