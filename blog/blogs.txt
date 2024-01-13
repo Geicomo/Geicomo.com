@@ -1,3 +1,7 @@
+Forgot Password Logic
+13th of January, 2024, 1:34am
+The forgot password page and emailing has been created that took me a about half a day to implement, after completing it openBSD recommended the design be remade for not being too secure so I updated it to use tokens instead of the method I was using. Yay security
+
 Chat implemented
 10th of January, 2024, 9:27pm
 After hours of working to get a live website chat setup and get guest permissions figured out it is implemented, I started at around 3:00pm and its now 9:14pm. Tough luck indeed.

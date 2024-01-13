@@ -27,7 +27,6 @@
        			<div  class="content">
         			<?php include '/var/www/html/data/signup.php'; ?>
     			</div>
-			<div class="resize-handle"></div>
 		</div>
 	</div>
 

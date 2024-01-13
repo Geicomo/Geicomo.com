@@ -53,7 +53,7 @@ if(isset($_POST['submit'])){
                 <a href="https://geicomo.com/register"><button type="button" style="margin-top:12px;font-size:12px;height:25px;width:100px;float:left;background-color:#00B2FF;">Sign Up</button></a> <br>
 </div>
 <div class="container"><button type="submit" name="guestLogin" style="margin-top:6px;font-size:12px;height:35px;width:100px;float:left;background-color:#FFA500;font-weight:bold;">Sign in as Guest</button></div>
-<div class="container"><a style="font-size:12px;margin-top:5px;" href="forgot.php">Forgot Password</a></div>
+<div class="container"><a style="font-size:12px;margin-top:5px;" href="https://geicomo.com/frgpassword/frgpassword.php">Forgot Password</a></div>
 	<div class="container"><p class="error"><?php echo @$user->error ?></p></div>
         <div class="container"><p class="success"><?php echo @$user->success ?></p></div>
 </form>

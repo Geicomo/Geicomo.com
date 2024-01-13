@@ -1,3 +1,6 @@
 (01-10-24, 08:34 pm) Geicomo: This chat stuff is pretty neat!
 (01-11-24, 7:55 pm) MilesTate: https://youtu.be/DY6ie3MAC-I?si=cyJlJokSckpVqFcE&amp;t=80
 (01-11-24, 9:02 pm) : I shit myself
+(01-12-24, 4:12 pm) openbased: HI
+(01-12-24, 4:12 pm) openbased: Why does resizing the chat window not increase the size of the chat?
+(01-12-24, 9:32 pm) MilesTate: ([4,2,2, [&quot;aaaa&quot;, &quot;bb&quot;, &quot;aa&quot;])
