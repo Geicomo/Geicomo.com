@@ -8,6 +8,7 @@
 <style>
 .draggable-box {
     position: absolute;
+    min-width: 350px;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);

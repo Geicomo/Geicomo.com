@@ -4,3 +4,5 @@
 (01-12-24, 4:12 pm) openbased: HI
 (01-12-24, 4:12 pm) openbased: Why does resizing the chat window not increase the size of the chat?
 (01-12-24, 9:32 pm) MilesTate: ([4,2,2, [&quot;aaaa&quot;, &quot;bb&quot;, &quot;aa&quot;])
+(01-13-24, 6:38 pm) admin: I dont know what your talking about
+(01-13-24, 6:39 pm) admin: Looks great too me!

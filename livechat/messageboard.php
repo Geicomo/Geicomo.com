@@ -10,11 +10,11 @@
                 position: absolute;
                 text-align: center;
                 padding: 10px;
-                max-height: 100px;
-        }
+		width: 100%;
+	}
 	.messages {
 		padding: 5px;
-		max-width: 343px;
+		width: 100%;
                 border: solid 1px;
                 border-radius: 2px;
 	}
@@ -28,6 +28,7 @@
 	<!-- Chat messages will be displayed here -->
 	</div>
 </div>
+<br><br><br><br><br><br><br><br>
 </div>
 <script>
 // Chat Script
@@ -52,6 +53,7 @@ function updateChat() {
 // Function to send a message using AJAX
 function sendMessage(message) {
     var xhr = new XMLHttpRequest();
+	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);	
 
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
