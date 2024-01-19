@@ -6,7 +6,11 @@
     <title>geic_bloc.info</title>
     <!-- Add your CSS styles here -->
 	<style>
-    		        /* Add your CSS styles for blog display here */
+			/* Add your CSS styles for blog display here */
+	.blogs-container {
+		max-height: 75vh;
+		overflow-y: scroll;
+	}
 	.blog-post {
 	    max-width: 85vh;
             border: 1px solid #ccc;
@@ -43,6 +47,7 @@
 
    if ($username) {
         echo '<h2>Blog Posts</h2>';
+        echo '<div class="blogs-container">';
         $blogFilePath = 'blogs.txt';
         if (file_exists($blogFilePath)) {
             $blogPosts = file_get_contents($blogFilePath);
@@ -56,6 +61,7 @@
                 echo '<p class="blog-content">' . nl2br($content) . '</p>';
                 echo '</div>';
             }
+            echo '</div>';
         } else {
             echo '<p>No blog posts available.</p>';
         }

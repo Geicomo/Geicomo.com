@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>live_chat.info</title>
-    <!-- Add your CSS styles here -->
     <style>
-        .chatbox {
+	.chatbox-container {
+		width: 70vh;
+	}
+	.chatbox {
                 position: absolute;
                 text-align: center;
-                padding: 10px;
 		width: 100%;
 	}
 	.messages {
@@ -21,7 +22,7 @@
     </style>
 </head>
 <body>
-<div class="content">
+<div class="chatbox-container">
 <div class="chatbox">
         <strong>Live Chat</strong>
 	<div class="messages" id="chat-box">

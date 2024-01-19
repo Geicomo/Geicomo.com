@@ -1,3 +1,7 @@
+FutureFM Work
+18th of January, 2024, 3:31am
+Its been a couple days since I&#039;ve done anything new to Geicomo, mostly took a break after implementing the email service. Now im working on FutureFM a radio station website, main challenge will probably be streaming music and capturing meta data. All true fun.
+
 Forgot Password Logic
 13th of January, 2024, 1:34am
 The forgot password page and emailing has been created that took me a about half a day to implement, after completing it openBSD recommended the design be remade for not being too secure so I updated it to use tokens instead of the method I was using. Yay security
