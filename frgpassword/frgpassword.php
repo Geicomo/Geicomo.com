@@ -1,12 +1,4 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Email Form</title>
-</head>
-<body>
-</body>
-</html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
         <title>Geic OS</title>

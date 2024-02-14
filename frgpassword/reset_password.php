@@ -47,7 +47,7 @@ if (isTokenValid($username, $token, $jsonFilePath)) {
 
         if ($newPassword === $confirmPassword) {
             updatePassword($username, $newPassword, $jsonFilePath);
-	    echo "<strong>Password updated successfully.</strong>";
+            echo "<strong>Password updated successfully.</strong>";
 ?>
 <script>
 setTimeout(function() {
@@ -55,7 +55,7 @@ setTimeout(function() {
         }, 5000);
 </script>
 <?php
-	} else {
+        } else {
             echo "Passwords do not match.";
         }
     } else {
@@ -82,19 +82,19 @@ setTimeout(function() {
         <div id="page1" class="draggable-box">
                 <div class="title-bar">reset_password.geic</div>
                 <div class="content">
-			<form action="" method="post">
-				<a style="font-weight:bold;font-size:20px;">Passwords must match</a><br><br>
-                		<strong>New Password: </strong><input type="password" name="password" required><br>
-                		<strong>Confirm Password: </strong><input type="password" name="confirm_password" required><br>
-                		<input style="display:flex;align-items:center;justify-content:center;margin-top:3px;font-size:12px;height:25px;width:95px;float:left;background-color:#34b500;" type="submit" value="Reset Password">
-	      		</form>
+                        <form action="" method="post">
+                                <a style="font-weight:bold;font-size:20px;">Passwords must match</a><br><br>
+                                <strong>New Password: </strong><input type="password" name="password" required><br>
+                                <strong>Confirm Password: </strong><input type="password" name="confirm_password" required><br>
+                                <input style="display:flex;align-items:center;justify-content:center;margin-top:3px;font-size:12px;height:25px;width:95px;float:left;background-color:#34b500;" type="submit" value="Reset Password">
+                        </form>
 <br><br><br><br><br><br><br><br>
-		</div>
+                </div>
         </div>
 </div>
 
 <div style="position:fixed;bottom:0">
-	<a>All content is licensed under </a><a href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1 unless otherwise posted.">CC BY-NC 4.0 DEED</a> unless otherwise posted.</a>
+        <a>All content is licensed under </a><a href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1 unless otherwise posted.">CC BY-NC 4.0 DEED</a> unless otherwise posted.</a>
 </div>
 <?php
 
@@ -103,4 +103,3 @@ setTimeout(function() {
     echo "Invalid or expired token.";
 }
 ?>
-

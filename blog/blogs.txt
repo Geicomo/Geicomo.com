@@ -1,3 +1,9 @@
+Long Time...
+11th of February, 2024, 10:48pm
+Its been a minute since I have even visited my own site but don&#039;t worry, work has been being done else where! the FutureFM site is online and im working on some other side projects.
+-
+Ive recently been viewing old 90`s made/inspired websites made with Neocities that aspire to bring back personal blogs/pre javascript websites with that old feel. Going to just mess around for fun!
+
 FutureFM Work
 18th of January, 2024, 3:31am
 Its been a couple days since I&#039;ve done anything new to Geicomo, mostly took a break after implementing the email service. Now im working on FutureFM a radio station website, main challenge will probably be streaming music and capturing meta data. All true fun.
