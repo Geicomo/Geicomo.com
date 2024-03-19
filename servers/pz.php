@@ -7,10 +7,10 @@
         <div style="margin: 5px;">
         <div class="serverstat">
                 <div style="font-size:19px"><strong>Geic PZ Server</strong></div>
-                <strong><span class="server-ip">IP: </strong>98.146.216.139<br></span>
+                <strong><span class="server-ip">IP: </strong>98.145.136.82<br></span>
                 <strong><span> Port:</strong> 16261</span> <br>
 <?php
-        $data = json_decode(file_get_contents('https://api.steampowered.com/IGameServersService/GetServerList/v1/?filter=\appid\108600\addr\98.146.216.139:16261&key=D98A2705777F0843FC224F8D7D2717A1'));
+        $data = json_decode(file_get_contents('https://api.steampowered.com/IGameServersService/GetServerList/v1/?filter=\appid\108600\addr\98.145.136.82:16261&key=D98A2705777F0843FC224F8D7D2717A1'));
         $main = $data->response->servers[0] ?? null;
         $status = "";
         $up = "https://geicomo.com/images/up.png";

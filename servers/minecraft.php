@@ -23,7 +23,7 @@
 
         }
 
-        initServerData("98.146.216.139","25565");
+        initServerData("98.145.136.82","25565");
 
         </script>
 <div style="margin: 5px;">

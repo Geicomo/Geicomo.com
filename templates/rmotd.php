@@ -68,6 +68,9 @@ RMOTD:
 		echo "Chippi Chippi Choppa Choppa...";
 		echo "<audio autoplay><source src='https://geicomo.com/audio/chipichopa.mp3' type='audio/mpeg'></audio>";
 		break;
+	case 19:
+                echo " <a href='https://geicomo.com/90s/enter.php'>90s.geic</a> ";
+		break;
         default:
                 echo "Tough luck";
                 break;
