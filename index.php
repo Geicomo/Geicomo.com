@@ -5,6 +5,18 @@ if (isset($_SESSION['authorized']) && $_SESSION['authorized'] === true) {
         $_POST['username'] = "Guest";
     }
 ?>
+<!--
+ ________  _______   ___  ________  ________  _____ ______   ________      
+|\   ____\|\  ___ \ |\  \|\   ____\|\   __  \|\   _ \  _   \|\   __  \    
+\ \  \___|\ \   __/|\ \  \ \  \___|\ \  \|\  \ \  \|\__\ \  \ \  \|\  \   
+ \ \  \  __\ \  \_|/_\ \  \ \  \    \ \  \|\  \ \  \||__| \  \ \  \|\  \   
+  \ \  \|\  \ \  \_|\ \ \  \ \  \____\ \  \|\  \ \  \    \ \  \ \  \|\  \ 
+   \ \_______\ \_______\ \__\ \_______\ \_______\ \__\    \ \__\ \_______\ 
+    \|_______|\|_______|\|__|\|_______|\|_______|\|__|     \|__|\|_______|
+
+All content is licensed under CC BY-NC 4.0 DEED unless otherwise posted.
+--!>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -356,53 +368,6 @@ function applyDraggableToExistingBoxes() {
 }
 
 document.addEventListener('DOMContentLoaded', applyDraggableToExistingBoxes);
-
-function updateChat() {
-    var chatBox = document.getElementById('chat-box');
-    var xhr = new XMLHttpRequest();
-
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            var messages = xhr.responseText.split('\n');
-            var html = '';
-            for (var i = 0; i < messages.length; i++) {
-                if (messages[i]) {  // Skip empty lines
-                    html += '<div>' + messages[i] + '</div>';
-                }
-            }
-            chatBox.innerHTML = html;
-            chatBox.scrollTop = chatBox.scrollHeight;
-        }
-    };
-
-    xhr.open('GET', 'https://geicomo.com/livechat/get_chat_messages.php', true);
-    xhr.send();
-}
-
-function sendMessage(message) {
-    var xhr = new XMLHttpRequest();
-
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            updateChat();
-        }
-    };
-
-    xhr.open('POST', 'https://geicomo.com/livechat/send_message.php', true);
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    xhr.send('message=' + encodeURIComponent(message));
-}
-
-updateChat();
-setInterval(updateChat, 2000);
-
-var sendButton = document.getElementById('send-button');
-sendButton.addEventListener('click', function () {
-    var messageInput = document.getElementById('message');
-    var message = messageInput.value;
-    sendMessage(message);
-    messageInput.value = '';
-});
 
 </script>
 
