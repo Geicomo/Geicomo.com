@@ -17,3 +17,8 @@ ErrorDocument 404 /404.php
 
 # Make directories unavaliable from browser
 Options -Indexes
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^mc\.geicomo\.com$ [NC]
+RewriteRule ^(.*)$ https://geicomo.com/servers/minecraft/minecraft [L,R=301]
+

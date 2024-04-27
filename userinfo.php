@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
 	<title>user_info.geic</title>
-        <meta name="viewport" content="width=device-width, initial-scale=0.7">
-        <link rel="stylesheet" type="text/css" href="https://www.geicomo.com/templates/base.css">
-</head>
-<body>
+<style>
+	#chat-element {
+		display: none;
+	}
+</style>
+
 <?php
 	// Start a session
 	session_start();
@@ -39,17 +38,24 @@
 
 
 ?>
-<a style="font-size:15px;float:right;"href="https://geicomo.com/help">help.info</a>
+<button style="float:right;" class="open-window-button" data-url="https://geicomo.com/help.php">./help.info</button>
 <p style="font-size:17px">Welcome: <?php echo "$username" ?> </p>
 Last Login:
 <?php echo getLastLoginTime($username, $jsonArray); ?>
 
+<br><br>
+<form id="lookupForm">
+    <label for="username">Account Search:</label><br>
+    <input  type="text" id="username" name="username" required>
+    <button type="submit">Lookup</button>
+</form>
 
-<!-- Profile Lookingup -->
+<div id="userInfo"></div> 
+<br>
 
 <?php
+// Account Search
 
-// Initialize variables to avoid undefined variable errors
 $username = $registrationTime = $lastLogin = $description = $notFoundMessage = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -71,15 +77,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 ?>
-<form id="lookupForm">
-    <label for="username">Account Search:</label><br>
-    <input  type="text" id="username" name="username" required>
-    <button type="submit">Lookup</button>
-</form>
 
-<div id="userInfo"></div> <!-- Place to display user information -->
 
-<script>
+
+<script> // USERINFO LOOKUP LOGIC
 document.getElementById('lookupForm').addEventListener('submit', function(e) {
     e.preventDefault(); // Prevent the form from submitting traditionally
 
@@ -103,79 +104,6 @@ document.getElementById('lookupForm').addEventListener('submit', function(e) {
     };
     xhr.send(formData);
 });
-</script>
-
-
-
-<!-- Chat Messaging -->
-
-
-<br><br>
-<a style="font-size:17px;">Live chat messaging:</a><br>
-    <?php
-	if ($username !== 'Guest') {
-    		echo '<input type="text" id="message" placeholder="Type your message" required>';
-           	echo '<button id="send-button">Send</button>';
-	} else {
-    		echo '<input type="text" id="message" disabled placeholder="Guests cant post">';
-		echo '<button id="send-button" disabled>X</button>';
-	}
-    ?>
-<br><br>
-    <?php
-    if ($username === 'Geicomo') {
-        // Display input fields for title and blog content
-        echo '<a style="font-size:18px;">Post to the Blog</a><br><br>';
-        echo '<label for="blog_title">Title:</label><br>';
-        echo '<input type="text" id="blog_title" required><br>';
-        echo '<label for="blog_content">Content:</label><br>';
-        echo '<textarea id="blog_content" rows="4" cols="50" required></textarea><br>';
-	echo '<button id="submit_blog" style="align-items:center;justify-content:center;margin-top:12px;font-size:12px;height:25px;width:60px;float:left;background-color:#34b500;">Submit</button>';
-    }
-            if (!$username) {
-        echo '<h2>Blog Posts</h2>';
-        $blogFilePath = 'blogs.txt';
-        if (file_exists($blogFilePath)) {
-            $blogPosts = file_get_contents($blogFilePath);
-            $postsArray = explode("\n\n", $blogPosts); // Split posts based on double newline
-            foreach ($postsArray as $post) {
-                echo '<div class="blog-post">';
-                // Extract the title, date, and content from each post
-                list($title, $date, $content) = explode("\n", $post, 3);
-                echo '<p class="blog-title">' . $title . '</p>';
-                echo '<p class="blog-date">' . $date . '</p>';
-                echo '<p class="blog-content">' . nl2br($content) . '</p>';
-                echo '</div>';
-            }
-        } else {
-            echo '<p>No blog posts available.</p>';
-        }
-    }
-    ?>
-
-    <!-- Include JavaScript for submitting the blog post -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const submitButton = document.getElementById('submit_blog');
-            const blogTitle = document.getElementById('blog_title');
-            const blogContent = document.getElementById('blog_content');
-
-            submitButton.addEventListener('click', function () {
-                const title = blogTitle.value;
-                const content = blogContent.value;
-                // Send the title and content to the PHP script using AJAX
-                const xhr = new XMLHttpRequest();
-                xhr.onreadystatechange = function () {
-                    if (xhr.readyState === 4 && xhr.status === 200) {
-                        // Refresh the page after successful submission
-                        location.reload();
-                    }
-                };
-                xhr.open('POST', 'https://geicomo.com/blog/posttoblog.php', true);
-                xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-                xhr.send('blog_title=' + encodeURIComponent(title) + '&blog_content=' + encodeURIComponent(content));
-            });
-	});
 
 function updateChat() {
     var chatBox = document.getElementById('chat-box');
@@ -240,34 +168,18 @@ sendButton.addEventListener('click', function () {
     // Clear the message input field
     messageInput.value = '';
 });
+
+// Hide/Show Chat Sending Feature
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if the chatbox-container exists
+    var chatboxContainer = document.getElementById('chatbox');
+
+    // If it exists, show the chat elements
+    if (chatboxContainer) {
+        document.getElementById('chat-elements').style.display = 'block';
+    }
+});
+
     </script>
-<?php
-if ($_SESSION['authorized']) {
-// Check if the logout button was clicked
-if (isset($_POST['logout'])) {
-    // Unset the authorized session variable to log the user out
-    $_SESSION['authorized'] = false;
-
-    // Redirect to the home page after logging out
-    echo "<script>window.location.href = 'https://geicomo.com/index.php';</script>";
-    exit;
-}
-
-// Check if the user is not logged in, then redirect to index.php
-if (!$isValidLogin) {
-    header("Location: index.php");
-    exit;
-}
-    echo "<form method='post' action=''>";
-    echo "<button class='btn' type='submit' name='logout' style='display:flex;align-items:center;justify-content:center;margin-top:12px;font-size:12px;height:25px;width:60px;float:left;background-color:#fda502;'>Logout</button>";
-    echo "</form>";
-} else {
-     echo "<a href='https://geicomo.com/index.php'><button class='btn' style='width:display:flex;align-items:center;justify-content:center;margin-top:12px;font-size:12px;height:25px;width:60px;float:left;background-color:#fda502;'>Login</button></a>";
-}
-?>
-<br><br><br>
-<a href="https://geicomo.com/livechat/messageboard.php">chat.info</a>
-<br><br><br><br>
+<br><br><br><br><br>
 <?php include('templates/directory.php');?>
-</body>
-</html>

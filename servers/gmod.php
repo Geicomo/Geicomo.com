@@ -33,11 +33,12 @@
 <div class="bottominfo">
 <a style="font-weight:bold;font-size:18px">Server Information:</a><br>
         <a style="font-size:15px">Server with Terrorist Town, Prop Hunt and Sandbox.<br> Votemap to change gamemode!</a><br>
-        <a style="font-size:15px"><i>Server restarts at 12:10AM/PM PDT daily.</i></a><br><br>
-        <a href="steam://connect/98.146.216.139:27015">Connect_To_The_Server.web</a><br> <br>
-        <a style="font-weight:bold;font-size:14px">(LINKS CAN BE ALTERNATE SITES)</a> <br>
+	<a style="font-size:15px"><i>Server restarts at 12:10AM/PM PDT daily.</i></a><br><br>
+	<a style="font-weight:bold;">Connect now: </a>
+	<a href="steam://connect/98.146.216.139:27015"><button class="open-window-button2" >./connect_to_the_server.web</button></a><br>
         <a style="font-weight:bold;font-size:16px"> Gmod Server Collection: </a>
-        <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3102135866">gmod_server_mods.web</a> <br>
+	<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3102135866"><button class="open-window-button2" >./gmod_server_mods.web</button></a><br>
+        <a style="font-weight:bold;font-size:14px">(LINKS CAN BE ALTERNATE SITES)</a> <br>
 </div>
 
 <?php include('../templates/servers.php');?>

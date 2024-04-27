@@ -6,7 +6,7 @@
 <body>
 <a style="font-weight:bold;font-size:18px">Mc Plugins:</a><br>
         <span style="font-size:18px">Decent Holograms</span> <br>
-        <a href="/mcmap/">Dynmap.web</a> <br>
+        <a href="/mcmap/">./Dynmap.web</a> <br>
         <span style="font-size:18px">Essentials</span> <br>
         <span style="font-size:18px">Grief Prevention</span> <br>
         <span style="font-size:18px">LuckPerms</span> <br>

@@ -40,7 +40,7 @@ class LoginUser {
                 session_start();
                 $_SESSION['username'] = $this->username;
                 $_SESSION['authorized'] = true;
-                header("location: secure.php");
+                header("location: https://geicomo.com/secure.php");
                 return $this->success = "Login Successful";
             }
         }

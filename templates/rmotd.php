@@ -1,8 +1,4 @@
-<html>
-<head>
         <title>rmotd.info</title>
-</head>
-<body>
 <div class="rmotd">
 RMOTD:
 <?php
@@ -32,7 +28,7 @@ RMOTD:
                 echo "3,124.7 Hours ;)";
                 break;
         case 7:
-                echo " <a href='https://www.youtube.com/watch?v=j7Ff6izcRCc'>click_me.web</a> ";
+                echo " <a href='https://www.youtube.com/watch?v=j7Ff6izcRCc'><button class='open-window-button2'>./click_me.web</button></a> ";
                 break;
         Case 8:
                 echo "THE REDLINERUSH!!!";
@@ -69,7 +65,7 @@ RMOTD:
 		echo "<audio autoplay><source src='https://geicomo.com/audio/chipichopa.mp3' type='audio/mpeg'></audio>";
 		break;
 	case 19:
-                echo " <a href='https://geicomo.com/90s/enter.php'>90s.geic</a> ";
+                echo "<button class='open-window-button' data-url='https://geicomo.com/90s/enter'>90`s</button> ";
 		break;
         default:
                 echo "Tough luck";
@@ -77,6 +73,4 @@ RMOTD:
         }
 ?>
 </div>
-</body>
-</html>
 

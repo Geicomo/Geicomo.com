@@ -69,6 +69,6 @@ Last updated: 1/11/2024
 <br><br>
 
 </div>
-<br><br><br><br><br>
+<br><br>
 </body>
 </html>

@@ -1,10 +1,6 @@
-<html>
-<body>
 <br><br>
-<a style="font-size:17px;border:solid 1.5px black;border-top:none;border-left:none;border-right:none" href="https://geicomo.com/servers/minecraft.php">minecraft.info</a><br>
-<a style="font-size:16px;border:solid 1.5px black;border-top:none;border-left:none;border-right:none" href="https://geicomo.com/servers/pz.php">project_zomboid.info</a><br>
-<a style="font-size:15px;border:solid 1.5px black;border-top:none;border-left:none;border-right:none" href="https://geicomo.com/servers/gmod.php">gmod.info</a>
+<a href="https://geicomo.com/servers/minecraft/minecraft"><button class="open-window-button2">./minecraft.info</button></a>
+<br>
+<button class="open-window-button" data-url="https://geicomo.com/servers/pz">./project_zomboid.info</button><br>
+<button class="open-window-button" data-url="https://geicomo.com/servers/gmod">./gmod.info</button>
 <br><br>
-</div>
-</body>
-</html>

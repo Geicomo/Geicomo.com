@@ -47,19 +47,19 @@
 				font-family: VeniceClassic;
 			}
   .loading-container {
-    width: 98.4%;
-    background-color: #707070;
+    	width: 98.4%;
+    	background-color: #707070;
 		border: 4px solid;
 		border-color: #ebe8e8 #c4c5c5;
   }
 
   .loading-bar {
-    width: 0%;
-    height: 30px;
-    background-color: #4CAF50;
-    text-align: center;
-    line-height: 30px;
-    color: white;
+    	width: 0%;
+    	height: 30px;
+    	background-color: #4CAF50;
+    	text-align: center;
+    	line-height: 30px;
+    	color: white;
   }
 			</style>
 
@@ -100,7 +100,8 @@
       		'Waiting for response...',
       		'Contacting server on 192.651.278.83...',
       		'Communicating with Geicomo.com...',
-      		'Extiguishing server fires...'
+      		'Extiguishing server fires...',
+      		'Enter floppy...'
     		];
 
     	const index = Math.floor(Math.random() * messages.length);

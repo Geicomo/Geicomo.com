@@ -64,7 +64,7 @@
     if (successMessage) {
         // If there's a success message, wait for 2 seconds and then redirect
         setTimeout(function() {
-            window.location.href = "https://geicomo.com/index.php";
+            window.location.href = "https://geicomo.com/data/login.php";
         }, 2000);
     }
 </script>

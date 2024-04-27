@@ -16,35 +16,17 @@ if (isset($_SESSION['authorized']) && $_SESSION['authorized'] === true) {
 	<div id="page1" class="draggable-box">
         	<div class="title-bar">
                         <a style="padding:2px 10px;">home.geic</a>
-                        <div class="dropdowndiv">
-				<div class="dropdown">
-				<div class="dropbtn">File</div>
-        			<div class="dropdown-content">
-          				<div id="link1" class="dItem">Directory
-            					<div class="dropdown-content2">
-              						<button class="open-window-button dItem" id="file" data-url="https://geicomo.com/home.php">./home.geic</button>
-              						<button class="open-window-button dItem" id="file" data-url="https://geicomo.com/info.php">./info.geic</button>
-              						<button class="open-window-button dItem" id="file" data-url="https://geicomo.com/serverinfo.php">./servers.geic</button>
-            					</div>
-          				</div>
-        			</div>
-      				</div> 
-
-				<div class="dropdown">
-				<div class="dropbtn">Edit</div>
-        			<div class="dropdown-content">
-				
-				</div>
-      				</div>
-
-				<div class="dropdown">
-				<div class="dropbtn">View</div>
-				<div class="dropdown-content">
-					<div class="dItem" id="file">Reset</div>
-					<a class="dItem" onclick="closeBox(this)">Close</a>
-        			</div>
-      				</div>
-			</div>
+                        <div style="margin-left:-58%;justify-content:none;">
+                                <div class="dropdown" style="float:left;">
+                                        <button class="dropbtn">File</button>
+                                        <div class="dropdown-content">
+                                                <a href="#">Reset</a>
+                                                <a href="#">Close</a>
+                                        </div>
+                                </div>
+                                        <button class="dropbtn">Edit</button>
+                                        <button class="dropbtn">View</button>
+                        </div>
                         <span class="close-button" onclick="closeBox(this)">X</span></div>
                 <div style="padding:2px;background-color:#838383;">
                         <div class="content">
@@ -58,35 +40,17 @@ if (isset($_SESSION['authorized']) && $_SESSION['authorized'] === true) {
 	<div id="page1" class="draggable-box" style="left:74vh;">
         	<div class="title-bar">
                         <a style="padding:2px 10px;">rmotd.info</a>
-                        <div class="dropdowndiv">
-				<div class="dropdown">
-				<div class="dropbtn">File</div>
-        			<div class="dropdown-content">
-          				<div id="link1" class="dItem">Directory
-            					<div class="dropdown-content2">
-              						<button class="open-window-button dItem" id="file" data-url="https://geicomo.com/home.php">./home.geic</button>
-              						<button class="open-window-button dItem" id="file" data-url="https://geicomo.com/info.php">./info.geic</button>
-              						<button class="open-window-button dItem" id="file" data-url="https://geicomo.com/serverinfo.php">./servers.geic</button>
-            					</div>
-          				</div>
-        			</div>
-      				</div> 
-
-				<div class="dropdown">
-				<div class="dropbtn">Edit</div>
-        			<div class="dropdown-content">
-				
-				</div>
-      				</div>
-
-				<div class="dropdown">
-				<div class="dropbtn">View</div>
-				<div class="dropdown-content">
-					<div class="dItem" id="file">Reset</div>
-					<a class="dItem" onclick="closeBox(this)">Close</a>
-        			</div>
-      				</div>
-			</div>
+                        <div style="margin-left:-58%;justify-content:none;">
+                                <div class="dropdown" style="float:left;">
+                                        <button class="dropbtn">File</button>
+                                        <div class="dropdown-content">
+                                                <a href="#">Reset</a>
+                                                <a href="#">Close</a>
+                                        </div>
+                                </div>
+                                        <button class="dropbtn">Edit</button>
+                                        <button class="dropbtn">View</button>
+                        </div>
                         <span class="close-button" onclick="closeBox(this)">X</span></div>
                 <div style="padding:2px;background-color:#838383;">
                         <div class="content">
@@ -101,35 +65,17 @@ if (isset($_SESSION['authorized']) && $_SESSION['authorized'] === true) {
         	<div class="title-bar">
                         <a style="padding:2px 10px;">user_info.geic</a>
                         <div class="dropdowndiv">
-				<div class="dropdown">
-				<div class="dropbtn">File</div>
-        			<div class="dropdown-content">
-          				<div id="link1" class="dItem">Directory
-            					<div class="dropdown-content2">
-              						<button class="open-window-button dItem" id="file" data-url="https://geicomo.com/home.php">./home.geic</button>
-              						<button class="open-window-button dItem" id="file" data-url="https://geicomo.com/info.php">./info.geic</button>
-              						<button class="open-window-button dItem" id="file" data-url="https://geicomo.com/serverinfo.php">./servers.geic</button>
-            					</div>
-          				</div>
-        			</div>
-      				</div> 
-
-				<div class="dropdown">
-				<div class="dropbtn">Edit</div>
-        			<div class="dropdown-content">
-				
-				</div>
-      				</div>
-
-				<div class="dropdown">
-				<div class="dropbtn">View</div>
-				<div class="dropdown-content">
-					<div class="dItem" id="file">Reset</div>
-					<a class="dItem" onclick="closeBox(this)">Close</a>
-        			</div>
-      				</div>
-			</div>
-                        <span class="close-button" onclick="closeBox(this)">X</span></div>
+                                <div class="dropdown" style="float:left;">
+                                        <button class="dropbtn">File</button>
+                                        <div class="dropdown-content">
+                                                <a href="#">Reset</a>
+                                                <a href="#">Close</a>
+                                        </div>
+                                </div>
+                                        <button class="dropbtn">Edit</button>
+                                        <button class="dropbtn">View</button>
+                        </div>
+                        <span class="close-button" onclick="closeBox(this)"></span></div>
                 <div style="padding:2px;background-color:#838383;">
                         <div class="content">
         <?php include( '/var/www/html/userinfo.php' ); ?>
@@ -141,42 +87,22 @@ if (isset($_SESSION['authorized']) && $_SESSION['authorized'] === true) {
 
 	<div id="page1" class="draggable-box" style="top:35vh;">
         	<div class="title-bar">
-                        <a style="padding:2px 10px;">sing_in.geic</a>
-                        <div class="dropdowndiv">
-				<div class="dropdown">
-				<div class="dropbtn">File</div>
-        			<div class="dropdown-content">
-          				<div id="link1" class="dItem">Directory
-            					<div class="dropdown-content2">
-              						<button class="open-window-button dItem" id="file" data-url="https://geicomo.com/home.php">./home.geic</button>
-              						<button class="open-window-button dItem" id="file" data-url="https://geicomo.com/info.php">./info.geic</button>
-              						<button class="open-window-button dItem" id="file" data-url="https://geicomo.com/serverinfo.php">./servers.geic</button>
-            					</div>
-          				</div>
-        			</div>
-      				</div> 
-
-				<div class="dropdown">
-				<div class="dropbtn">Edit</div>
-        			<div class="dropdown-content">
-				
-				</div>
-      				</div>
-
-				<div class="dropdown">
-				<div class="dropbtn">View</div>
-				<div class="dropdown-content">
-					<div class="dItem" id="file">Reset</div>
-					<a class="dItem" onclick="closeBox(this)">Close</a>
-        			</div>
-      				</div>
-			</div>
-                        <span class="close-button" onclick="closeBox(this)">X</span></div>
+                        <a style="padding:2px 10px;">sign_in.geic</a>
+                        <div style="margin-left:-49%;justify-content:left;">
+                                <div class="dropdown" style="float:left;">
+                                        <button class="dropbtn">File</button>
+                                        <div class="dropdown-content">
+                                                <a href="#">Reset</a>
+                                                <a href="#">Close</a>
+                                        </div>
+                                </div>
+                                        <button class="dropbtn">Edit</button>
+                                        <button class="dropbtn">View</button>
+                        </div>
+                        <span class="close-button" onclick="closeBox(this)"></span></div>
                 <div style="padding:2px;background-color:#838383;">
                         <div class="content">
         <?php include( '/var/www/html/guest/guestlogin.php' ); ?>
-                        </div>
-                                <div class="resize-handle"></div>
                         </div>
                 </div>
 	</div>
@@ -194,6 +120,8 @@ function makeDraggable(element) {
             let shiftX = event.clientX - element.getBoundingClientRect().left;
             let shiftY = event.clientY - element.getBoundingClientRect().top;
 
+            element.style.position = 'absolute';
+            element.style.zIndex = 1000;
             document.body.append(element);
 
             function moveAt(pageX, pageY) {
@@ -224,36 +152,17 @@ function makeDraggable(element) {
 }
 
 const menuTemplate = `
-                        <div class="dropdowndiv">
-				<div class="dropdown">
-				<div class="dropbtn">File</div>
-        			<div class="dropdown-content">
-          				<div id="link1" class="dItem">Directory
-            					<div class="dropdown-content2">
-              						<button class="open-window-button dItem" id="file" data-url="https://geicomo.com/home.php">./home.geic</button>
-              						<button class="open-window-button dItem" id="file" data-url="https://geicomo.com/info.php">./info.geic</button>
-              						<button class="open-window-button dItem" id="file" data-url="https://geicomo.com/serverinfo.php">./servers.geic</button>
-            					</div>
-          				</div>
-        			</div>
-      				</div> 
-
-				<div class="dropdown">
-				<div class="dropbtn">Edit</div>
-        			<div class="dropdown-content">
-				
-				</div>
-      				</div>
-
-				<div class="dropdown">
-				<div class="dropbtn">View</div>
-				<div class="dropdown-content">
-					<div class="dItem" id="file">Reset</div>
-					<a class="dItem" onclick="closeBox(this)">Close</a>
-        			</div>
-      				</div>
-			</div>
-`;
+    <div style="margin-left:-49%; justify-content:left;">
+        <div class="dropdown" style="float:left;">
+            <button class="dropbtn">File</button>
+            <div class="dropdown-content">
+                <a href="#" class="open-window-button" data-url="/path/to/reset">Reset</a>
+                <a href="#" class="open-window-button" data-url="/path/to/close">Close</a>
+            </div>
+        </div>
+        <button class="dropbtn">Edit</button>
+        <button class="dropbtn">View</button>
+    </div>`;
 
 
 function createNewPageDiv(url) {
@@ -275,7 +184,7 @@ function createNewPageDiv(url) {
 
             const titleBar = document.createElement('div');
             titleBar.className = 'title-bar';
-            titleBar.innerHTML = `<span style="padding:2px 10px;" class="page-title">${pageTitle}</span>` + menuTemplate ;
+            titleBar.innerHTML = `<span class="page-title">${pageTitle}</span>` + menuTemplate ;
 
             const closeButton = document.createElement('span');
             closeButton.className = 'close-button';
@@ -289,14 +198,10 @@ function createNewPageDiv(url) {
 
             newPageDiv.appendChild(titleBar);
 
-	    const spacerDiv = document.createElement('div');
-            spacerDiv.className = 'spacer';
-
             const contentDiv = document.createElement('div');
             contentDiv.className = 'content';
             contentDiv.innerHTML = html;
-            newPageDiv.appendChild(spacerDiv);
-            spacerDiv.appendChild(contentDiv);
+            newPageDiv.appendChild(contentDiv);
 
             document.body.appendChild(newPageDiv);
             makeDraggable(newPageDiv);

@@ -34,7 +34,7 @@
         <a style="font-size:15px"><i>Server restarts at 12:05AM/PM PDT daily.</i></a><br><br>
         <a style="font-weight:bold;font-size:14px">(LINKS CAN BE ALTERNATE SITES)</a> <br>
         <a style="font-weight:bold;font-size:16px"> Project Zomboid Server Collection: </a>
-        <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3030612933">project_zomboid_mods.web</a> <br>
+        <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3030612933"><button class="open-window-button2">./project_zomboid_mods.web</button></a> <br>
 <?php include('../templates/servers.php');?>
 <br><br><br>
 <?php include('../templates/directory.php');?>
