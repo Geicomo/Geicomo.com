@@ -10,5 +10,3 @@
 <br><br>
 <a style="font-size:17px">Geicomos Blog:</a>
 <button class="open-window-button" data-url="https://geicomo.com/blog/blog">./blog.info</button>
-<br><br><br><br>
-<?php include('templates/directory.php');?>

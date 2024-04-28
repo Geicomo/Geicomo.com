@@ -106,5 +106,3 @@ document.getElementById('lookupForm').addEventListener('submit', function(e) {
 });
 
     </script>
-<br><br><br><br><br>
-<?php include('templates/directory.php');?>

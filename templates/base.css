@@ -32,14 +32,12 @@ button {
         padding: 5px;
         cursor: move;
         display: flex;
-        justify-content: space-between;
         align-items: center;
      }
 
      /* Top bar dropdown css */
 .dropdowndiv {
-	margin-left: -60%;
-	justify-content: left;
+	display: flex;
 }
 .dropbtn {
 	cursor: pointer;
@@ -121,6 +119,7 @@ button {
     }
 
 .spacer {
+	height: 100%;
 	padding: 2px;
 	background-color: #838383;
 }

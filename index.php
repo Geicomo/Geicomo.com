@@ -58,7 +58,7 @@ All content is licensed under CC BY-NC 4.0 DEED unless otherwise posted.
       				</div>
 			</div>
                         <span class="close-button" onclick="closeBox(this)">X</span></div>
-                <div style="padding:2px;background-color:#838383;">
+                <div style="height:100%;padding:2px;background-color:#838383;">
                         <div class="content">
         <?php include( '/var/www/html/home.php' ); ?>
                         </div>
@@ -100,7 +100,7 @@ All content is licensed under CC BY-NC 4.0 DEED unless otherwise posted.
       				</div>
 			</div>
                         <span class="close-button" onclick="closeBox(this)">X</span></div>
-                <div style="padding:2px;background-color:#838383;">
+                <div style="height:100%;padding:2px;background-color:#838383;">
                         <div class="content">
         <?php include( '/var/www/html/templates/rmotd.php' ); ?>
                         </div>
@@ -142,7 +142,7 @@ All content is licensed under CC BY-NC 4.0 DEED unless otherwise posted.
       				</div>
 			</div>
                         <span class="close-button" onclick="closeBox(this)">X</span></div>
-                <div style="padding:2px;background-color:#838383;">
+                <div style="height:100%;padding:2px;background-color:#838383;">
                         <div class="content">
         <?php include( '/var/www/html/userinfo.php' ); ?>
                         </div>
@@ -184,7 +184,7 @@ All content is licensed under CC BY-NC 4.0 DEED unless otherwise posted.
       				</div>
 			</div>
                         <span class="close-button" onclick="closeBox(this)">X</span></div>
-                <div style="padding:2px;background-color:#838383;">
+                <div style="height:100%;padding:2px;background-color:#838383;">
                         <div class="content">
         <?php include( '/var/www/html/guest/guestlogin.php' ); ?>
                         </div>

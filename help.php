@@ -8,5 +8,3 @@ This page has info on how to navigate this webpage. Every link you click will cr
 <a>./help<strong>.info</strong> - <strong>.info</strong> give info on Geicomo.com or services and usually does not lead anywhere else.</a><br>
 <a>./steam<strong>.web</strong> - <strong>.web</strong> links are links that are outside of the Geicomo.com domain.</a><br>
 <a>./cashout<strong>.game</strong> - <strong>.game</strong> will take you to a game by Geicomo.</a>
-<br><br><br><br><br>
-<?php include('templates/directory.php');?>
