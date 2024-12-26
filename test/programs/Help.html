@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Help</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ecf0f1;
+            color: #2c3e50;
+	    overflow-y: hidden;
+        }
+        #help-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        #help-content {
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        #help-navigation {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+        .page-button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .page-button.active {
+            background-color: #2ecc71;
+        }
+    </style>
+</head>
+<body>
+    <div id="help-container">
+        <div id="help-content">
+            <!-- Content for the first page will be loaded here -->
+        </div>
+        <div id="help-navigation">
+            <!-- Page buttons will be dynamically generated here -->
+        </div>
+    </div>
+
+    <script>
+        // Array of page objects with names and content
+        const pages = [
+            { name: 'Help', content: `<h1>Welcome to the Help Menu</h1>
+	      <p>Welcome to Geicomo.com. You have opened up the help program, everything in this program will teach you how to navigate Geicomo.com. Geicomo.com is a sudo OS with the same features your regular desktop usually would have (graphically speaking). Open up other programs to view the content, explore different pages in those programs, resize, fullscreen or delete programs and sort it all in your trusty desktop and taskbar!<br><br> Enjoy!</p>` },
+            { name: 'Contact Us', content: `<h1>Contact</h1>
+                <p>Any questions or need to get in contact can be directed to: geicomoservices@gmail.com</p>` }
+        ];
+
+        let currentPage = 0;
+
+        const contentDiv = document.getElementById('help-content');
+        const navigationDiv = document.getElementById('help-navigation');
+
+        // Function to update the content based on the current page
+        function updatePage() {
+            contentDiv.innerHTML = pages[currentPage].content;
+            const buttons = document.querySelectorAll('.page-button');
+            buttons.forEach((button, index) => {
+                button.classList.toggle('active', index === currentPage);
+            });
+        }
+
+        // Function to create page buttons
+        function createPageButtons() {
+            pages.forEach((page, index) => {
+                const button = document.createElement('button');
+                button.className = 'page-button';
+                button.textContent = page.name; // Use the custom page name
+                button.addEventListener('click', () => {
+                    currentPage = index;
+                    updatePage();
+                });
+                navigationDiv.appendChild(button);
+            });
+        }
+
+        // Initialize the page buttons and content
+        createPageButtons();
+        updatePage();
+    </script>
+</body>
+</html>
+
+
