@@ -1,0 +1,27 @@
+{
+    "Jolise": {
+        "password": "$2y$10$FXNd23UOg47J41fGDM5.IOSFGubGLyCdKRBFLD2mfNikiOvG73WH6",
+        "score": 55
+    },
+    "Penji": {
+        "password": "$2y$10$yOyURD6l3Oi7iuernCg73uoNAyWWhmgnkGLpax4HrrAXddM7VlwV2",
+        "score": 201,
+        "attributes": {
+            "background": "#800080"
+        }
+    },
+    "Geicomo": {
+        "password": "$2y$10$s.jbi6mYnsNVsro.472Bw.OGYG65vn01BXbRBLjQ.XrIeAo3DI9FW",
+        "score": 172,
+        "attributes": {
+            "background": "#d5bba0"
+        }
+    },
+    "Jimmy Joe Buckbob": {
+        "password": "$2y$10$sD41nkjo4I3Lpj3hNM8rJOFzDUmUK9eTRe1sIRLWRIlvAx8NqLQlO",
+        "score": 31,
+        "attributes": {
+            "background": "#c09fd5"
+        }
+    }
+}

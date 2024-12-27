@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 *.swp
 audio/
 images/
 *.json
+=======
+admin/
+*.swp
+audio/
+images/
+livechat/*.txt
+>>>>>>> c5796a17a5009d548aed0dcdd4d177c44a918418

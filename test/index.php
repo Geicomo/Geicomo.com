@@ -7,7 +7,7 @@ if (isset($_GET['username'])) {
     $_SESSION['username'] = $_GET['username'];
 
     // Redirect to the same page without the query parameter to avoid exposing it in the URL
-    header('Location: index.php');
+    header('Location: https://geicomo.com/test/index.php');
     exit;
 }
 
@@ -115,7 +115,7 @@ $background = $userAttributes['background'] ?? '#2c3e50'; // Default to a dark g
             if (pathinfo($file, PATHINFO_EXTENSION) === 'js') {
                 $programName = pathinfo($file, PATHINFO_FILENAME);
                 echo "<div class='icon' onclick='openJsProgram(\"$scriptsDir$file\", \"$programName\")'>
-                        <img src='/images/Blockade.png' alt='$programName'>
+                        <img src='https://geicomo.com/images/Blockade.png' alt='$programName'>
                         <div>$programName</div>
                       </div>";
             }
@@ -342,17 +342,6 @@ iframe.onload = () => {
 
         window.addEventListener('load', restorePrograms);
     </script>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Geicomo.com</title>
-</head>
-<body>
-<p>We rewriting this shit. <br><br> Come back later.</p>
->>>>>>> c5796a17a5009d548aed0dcdd4d177c44a918418
 </body>
 </html>
 
