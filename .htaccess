@@ -1,0 +1,24 @@
+# Rewrites all extensions
+
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Check for file in directory with .php
+
+RewriteCond %{REQUEST_FILENAME}\.php -f
+
+# Show the page with .php or .html extension
+
+RewriteRule ^(.*)$ $1.php [NC,L]
+
+# 404 page redirect
+ErrorDocument 404 /404.php
+
+# Make directories unavaliable from browser
+Options -Indexes
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^mc\.geicomo\.com$ [NC]
+RewriteRule ^(.*)$ https://geicomo.com/servers/minecraft/minecraft [L,R=301]
+

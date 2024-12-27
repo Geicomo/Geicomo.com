@@ -1,0 +1,79 @@
+html {
+	background-image: url('/assets/90sassets/images/background.jpg');
+	width: auto;
+	height: auto;
+	max-height: 750px;
+}
+
+@font-face {
+    	font-family: "VeniceClassic";
+    	src: url("VeniceClassic.ttf") format("truetype");
+}
+
+a {
+	font-family: VeniceClassic;
+}
+
+.logo {
+	text-align: center;
+	color: white;
+	font-family: VeniceClassic;
+}
+
+.logo a {
+	background-color: #121414;
+	padding: 4px;
+	color: white;
+	font-size: 32px;
+	border-radius: 8px;
+	border: 2px solid #fa0002;
+	width: 450px;
+}
+
+.topbar {
+	text-align: center;
+	margin-top: 40px;
+	border: 3px solid;
+	height: 50px;
+	background-color: rgba(84,84,84, 0.9);
+	border-color: #fa0002 #d53737 #d53737;
+	border-left: hidden;
+	border-right: hidden;
+}
+.topbar button {
+	border: 2px solid;
+	border-color: #fa0002 #d53737 #d53737 #fa0002;
+	font-weight: bold;
+	color: white;
+	padding: 9px;
+	margin-top: 6px;
+	background-color: #0c0c0c;
+}
+
+.topbar button:hover {
+	cursor: pointer;
+	border-color: #d53737 #fa0002 #fa0002 #d53737; 
+	font-weight: italic;
+	color: white;
+	padding: 8.5px;
+}
+
+.main {
+	box-shadow: 0px 1px #707070;
+	margin: auto;
+	border: 4px solid;
+	border-color: #ebe8e8 #c4c5c5;
+	background: #0c0c0c;
+	margin-top: 3vh;
+	width: auto;
+	padding: 2px;
+	height: auto;
+}
+
+.info {
+	border: 2px solid #707070;
+	padding: 5px;
+	border-radius: 2px;
+	width: 100%;
+	height: 100%;
+}
