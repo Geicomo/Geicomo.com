@@ -3,14 +3,14 @@ function initProgram(containerId) {
     container.style.position = 'relative';
     container.style.background = '#1abc9c';
     container.style.overflow = 'hidden';
-
-    let playerRadius = 15; // Initial size of the player's circle
-    const redCircleSize = 20; // Static size of red circles
+// Game objects
+    let playerRadius = 15; 
+    const redCircleSize = 20; 
     const greenCircleSize = 20;
-    const spawnInterval = 500; // Time in ms between spawning objects
+    const spawnInterval = 500; 
     const fallSpeed = 4;
 
-// Create the start menu overlay
+// Start menu
     const startMenu = document.createElement('div');
     startMenu.style.position = 'absolute';
     startMenu.style.top = '0';
@@ -63,16 +63,14 @@ function initProgram(containerId) {
 function startGame() {
     gameRunning = true;
 
-    // Create player circle
     player.style.position = 'absolute';
     player.style.width = `${playerRadius * 2}px`;
     player.style.height = `${playerRadius * 2}px`;
     player.style.background = '#3498db';
     player.style.borderRadius = '50%';
-    player.style.pointerEvents = 'none'; // Prevent interference with mouse events
+    player.style.pointerEvents = 'none';
     container.appendChild(player);
 
-    // Score and game over display
     scoreDisplay.innerText = `Score: ${score}`;
     scoreDisplay.style.position = 'absolute';
     scoreDisplay.style.top = '5px';
@@ -167,18 +165,15 @@ function gameOver() {
     clearInterval(spawnIntervalId);
     clearInterval(updateIntervalId);
 
-    // Automatically save the score if the user is logged in
     if (loggedInUser) {
         autoSaveScore(score);
 	console.log("Auto applying score...");
     } else {
-        // Show the form for manual saving if the user is not logged in
         nameForm.style.display = 'block';
 	console.log("Manually apply score...");
     }
 }
 
-    // Attach event listener for manual score saving
     if (!loggedInUser) {
         document.getElementById('saveScoreForm').addEventListener('submit', (e) => {
             e.preventDefault();
@@ -188,7 +183,6 @@ function gameOver() {
         });
     }
 
-    // Player movement
     let isMouseInside = false;
 
     container.addEventListener('mouseenter', () => {
@@ -211,7 +205,6 @@ function gameOver() {
         }
     });
 
-    // Create falling objects
     const fallingObjects = [];
     function spawnFallingObject() {
 	if (!gameRunning) return;
@@ -231,7 +224,6 @@ function gameOver() {
         }
     }
 
-    // Update game state
     function updateGameState() {
 	if (!gameRunning) return;
         if (!isMouseInside || gameOverDisplay.style.display === 'block') return;
@@ -271,11 +263,9 @@ function gameOver() {
             // Check if the object reaches the bottom
             if (objectY > container.offsetHeight) {
                 if (object.dataset.type === 'green') {
-                    // End the game if a green circle reaches the bottom
                     gameOver();
                     return;
                 } else {
-                    // Remove non-green objects from the game
                     container.removeChild(object);
                     fallingObjects.splice(i, 1);
                 }
