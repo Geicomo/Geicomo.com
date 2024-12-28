@@ -294,65 +294,66 @@ iframe.onload = () => {
             }
         }
 
-        function enableDrag(windowEl, titleBar, instanceId, type, filePath, programTitle) {
-            let isDragging = false;
-            let offsetX, offsetY;
+function enableDrag(windowEl, titleBar, instanceId, type, filePath, programTitle) {
+    let isDragging = false;
+    let offsetX, offsetY;
 
-            titleBar.addEventListener('mousedown', (e) => {
-                isDragging = true;
-                offsetX = e.offsetX;
-                offsetY = e.offsetY;
-            });
+    titleBar.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        offsetX = e.offsetX;
+        offsetY = e.offsetY;
+    });
 
-            document.addEventListener('mousemove', (e) => {
-                if (isDragging) {
-                    const x = e.clientX - offsetX;
-                    const y = e.clientY - offsetY;
-                    windowEl.style.left = `${x}px`;
-                    windowEl.style.top = `${y}px`;
+    document.addEventListener('mousemove', (e) => {
+        if (isDragging) {
+            const desktop = document.getElementById('desktop');
+            const desktopRect = desktop.getBoundingClientRect();
 
-                    saveProgramState(instanceId, {
-                        type,
-                        filePath,
-                        programTitle,
-                        x,
-                        y,
-                        width: windowEl.offsetWidth,
-                        height: windowEl.offsetHeight,
-                    });
-                }
-            });
+            // Calculate new position
+            let x = e.clientX - offsetX;
+            let y = e.clientY - offsetY;
 
-            document.addEventListener('mouseup', () => {
-                isDragging = false;
-            });
+            // Enforce boundaries
+            x = Math.max(desktopRect.left, Math.min(desktopRect.right - windowEl.offsetWidth, x));
+            y = Math.max(desktopRect.top, Math.min(desktopRect.bottom - windowEl.offsetHeight, y));
 
-            windowEl.addEventListener('resize', () => {
-                saveProgramState(instanceId, {
-                    type,
-                    filePath,
-                    programTitle,
-                    x: parseInt(windowEl.style.left),
-                    y: parseInt(windowEl.style.top),
-                    width: windowEl.offsetWidth,
-                    height: windowEl.offsetHeight,
-                });
+            // Apply new position
+            windowEl.style.left = `${x}px`;
+            windowEl.style.top = `${y}px`;
+
+            // Save the position
+            saveProgramState(instanceId, {
+                type,
+                filePath,
+                programTitle,
+                x,
+                y,
+                width: windowEl.offsetWidth,
+                height: windowEl.offsetHeight,
             });
         }
+    });
+
+    document.addEventListener('mouseup', () => {
+        isDragging = false;
+    });
+
+    windowEl.addEventListener('resize', () => {
+        const rect = windowEl.getBoundingClientRect();
+        saveProgramState(instanceId, {
+            type,
+            filePath,
+            programTitle,
+            x: rect.left,
+            y: rect.top,
+            width: rect.width,
+            height: rect.height,
+        });
+    });
+}
 
         window.addEventListener('load', restorePrograms);
     </script>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Geicomo.com</title>
-</head>
-<body>
-<p>We rewriting this shit. <br><br> Come back later.</p>
->>>>>>> c5796a17a5009d548aed0dcdd4d177c44a918418
 </body>
 </html>
 
